@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: Poppins;
+    font-size: medium;
+    background-color:#15111f ;
+}
+
+h1, h2, h3 {
+    color: white;
+    font-weight: 500;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.section{
+    padding: 2rem 0 4rem;
+}
+
+.section_title{
+    font-size: large;
+}
+
+.section_subtitle{
+    display: block;
+    font-size: small;
+    margin-bottom: 5px;
+}
+
+.section_title , .section_subtitle {
+    text-align: center;
+}
+
+.container{
+    max-width: 768px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.grid{
+    display: grid;
+    gap: 1,5rem;
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    background-color: #15111f;
+}
+
+.nav{
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_logo{
+    color: white;
+    font-weight: 300;
+}
+
+.nav_menu{
+    position: fixed;
+    bottom: - 100%;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -1px 4px #000000;
+    transition: .3s;
+}
+
+.nav_list{
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+}
+
+.nav_item{
+    display: flex;
+    align-items: center;
+    font-size: small;
+    color: white;
+    font-weight: 300;
+}
+
+.nav_item:hover {
+    color: #5224c7;
+}
+
+
+/*---------HOME-----------*/
+
+.home section{
+    gap: 1rem;
+}
+
+.home_container{
+    grid-template-columns: .5fr 2fr;
+    padding-top: 3.5rem;
+    align-items: center;
+}
+
+.home_social {
+    display: grid;
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.home_data{
+    justify-content: center;
+}
+
+.home_title{
+    font-size:larger;
+}
+
+.home_subtitle{
+    font-size: medium;
+    color: rgb(216, 214, 214);
+    font-weight: 200;
+    margin-bottom: 1rem;
+}
+
+.home_description{
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
