@@ -63,63 +63,68 @@ a{
 
 
 /*---------NAV-----------*/
-
-.header{
+.header {
     width: 100%;
     position: fixed;
-    bottom: 0;
+    top: 0; /* Mude de 'bottom' para 'top' para posicionar no topo */
     left: 0;
     z-index: 99;
     background-color: #15111f;
 }
 
-.nav{
-    height: 3rem;
+.nav {
+    max-width: 968px;
+    height: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto; /* Adicionado para centralizar horizontalmente */
 }
 
-.nav_logo{
+.nav_logo {
     color: white;
     font-weight: 300;
 }
 
-.nav_menu{
-    position: fixed;
-    bottom: - 100%;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 -1px 4px #000000;
-    transition: .3s;
-}
-
-.nav_list{
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2rem;
-}
-
-.nav_item{
+.nav_menu {
     display: flex;
-    align-items: center;
+}
+
+.nav_list {
+    display: flex;
+    list-style: none; 
+}
+
+.nav_item {
+    margin-right: 20px; 
     font-size: small;
     color: white;
-    font-weight: 300;
+    font-weight: 500;
+    text-decoration: none; 
 }
 
 .nav_item:hover {
     color: #5224c7;
 }
 
+@media (max-width: 768px) {
+    .nav_menu {
+        display: none; 
+    }
+
+    .nav {
+        justify-content: flex-end; /
+    }
+}
 
 /*---------HOME-----------*/
 
-.home section{
+.home section {
     gap: 1rem;
 }
 
-.home_container{
-    grid-template-columns: .5fr 2fr;
+.home_container {
+    grid-template-columns: 1fr 2fr; /* ou grid-template-columns: 0.5fr 2fr; */
     padding-top: 3.5rem;
     align-items: center;
 }
@@ -132,44 +137,56 @@ a{
     margin-top: 1rem;
 }
 
-.home_data{
+.home_data {
     justify-content: center;
 }
 
-.home_title{
-    font-size:larger;
+.home_title {
+    font-size: 2rem; 
 }
 
-.home_subtitle{
-    font-size: medium;
+.home_subtitle {
+    font-size: 1.5rem; 
     color: rgb(216, 214, 214);
     font-weight: 200;
     margin-bottom: 1rem;
 }
 
-.home_description{
+.home_description {
     color: white;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
 
+
 /*---------SKILLS-----------*/
 
-.skills__title {
+.skills_header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.skills__titles {
+    display: flex;
     font-size: white;
     justify-content: center;
 }
 
-.skills_subtitle{
+.skills__subtitle{
     font-size: small;
     justify-content: center;
     color: white;
 }
 
 .skills__list {
+    margin-right: auto;
+    margin-left: auto;
     row-gap: 1.5rem;
-    padding-left: 2.7rem;
+    padding-left: 0;
 }
 
 .skills__titles {
@@ -192,25 +209,120 @@ a{
     background-color: #5224c7;
 }
 
-.skills__percentage {
+.skills__percentage{
     display: block;
-    background-color: var(--first-color);
 }
 
-.skills__html {
+.skills__number{
+    color: white;
+}
+
+/*---------PORTFOLIO-----------*/
+
+.portfolio section {
     width: 100%;
 }
 
-.skills__close .skills__list {
-    height: 0;
-    overflow: hidden;
+.section_title {
+    color: white;
+    font-weight: 500;
+    font-size: larger;
 }
 
-.skills__open .skills__list {
-    height: max-content;
-    margin-bottom: 1rem;
+.section_subtitle {
+    color: white;
+    font-weight: 300;
 }
 
-.skills__open .skills__arrow {
-    transform: rotate(-180deg);
+.portfolio_container :nth-child(n + 0){
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.portfolio_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    background-color: #251e36;
+    border-radius: 10px;
+}
+
+.portfolio_container_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.portfolio_content img {
+    margin-right: 10px; 
+}
+
+.portfolio_title {
+    font-size: medium;
+    color: #5224c7;
+}
+
+.portfolio_description {
+    font-size: small;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+
+
+/*---------CONTACT-----------*/
+
+.contact_section {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: #251e36;
+}
+
+.contact_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+}
+
+.contact_information {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem; 
+    margin-bottom: 2rem;
+}
+
+.contact_icon {
+    height: 20px;
+    margin-right: 1rem;
+}
+
+.contact_title {
+    font-size: medium;
+    font-weight: 300;
+}
+
+.contact_subtitle {
+    font-size: small;
+    color: white;
+}
+
+/*==================== FOOTER ====================*/
+
+footer{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: center; 
+}
+    
+.footer_container {
+    display: flex;
 }
