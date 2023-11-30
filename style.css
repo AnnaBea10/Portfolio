@@ -61,6 +61,9 @@ a{
     gap: 1,5rem;
 }
 
+
+/*---------NAV-----------*/
+
 .header{
     width: 100%;
     position: fixed;
@@ -148,4 +151,66 @@ a{
     color: white;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+
+/*---------SKILLS-----------*/
+
+.skills__title {
+    font-size: white;
+    justify-content: center;
+}
+
+.skills_subtitle{
+    font-size: small;
+    justify-content: center;
+    color: white;
+}
+
+.skills__list {
+    row-gap: 1.5rem;
+    padding-left: 2.7rem;
+}
+
+.skills__titles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.skills__name {
+    font-size: small;
+    font-weight: 200;
+}
+
+.skills__bar, .skills__percentage {
+    height: 5px;
+    border-radius: .25rem;
+}
+
+.skills__bar {
+    background-color: #5224c7;
+}
+
+.skills__percentage {
+    display: block;
+    background-color: var(--first-color);
+}
+
+.skills__html {
+    width: 100%;
+}
+
+.skills__close .skills__list {
+    height: 0;
+    overflow: hidden;
+}
+
+.skills__open .skills__list {
+    height: max-content;
+    margin-bottom: 1rem;
+}
+
+.skills__open .skills__arrow {
+    transform: rotate(-180deg);
 }
