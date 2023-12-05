@@ -28,6 +28,9 @@ a{
 }
 
 .section{
+    width: 100%;
+    left: 0;
+    top: 0;
     padding: 2rem 0 4rem;
 }
 
@@ -143,6 +146,20 @@ a{
     justify-content: center;
 }
 
+.home_title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white; 
+    margin-bottom: 1rem;
+}
+
+.home_subtitle{
+    font-size: 1rem; 
+    color: rgb(216, 214, 214);
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
 .home_description {
     color: white;
     margin-top: 2rem;
@@ -153,24 +170,30 @@ a{
 
 /*---------SKILLS-----------*/
 
-.skills section{
+.skills section {
     position: relative;
     width: 100%;
     height: fit-content;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    margin: auto;
+    margin-left: 20px; 
 }
 
 .skills_title{
     font-size: 2rem;
     font-weight: 300;
     color: white;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .progress_bars{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1rem;
+    justify-content: center;
 }
 
 .progress_bar{
@@ -276,11 +299,12 @@ a{
 .contact_title {
     font-size: medium;
     font-weight: 300;
+    color: white;
 }
 
 .contact_subtitle {
     font-size: small;
-    color: white;
+    color: rgb(216, 214, 214);
 }
 
 /*==================== FOOTER ====================*/
