@@ -19,11 +19,6 @@ body{
     background-color:#15111f ;
 }
 
-h1, h2, h3 {
-    color: white;
-    font-weight: 500;
-}
-
 ul{
     list-style: none;
 }
@@ -37,13 +32,17 @@ a{
 }
 
 .section_title{
-    font-size: large;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white; 
+    margin-bottom: 1rem;
 }
 
 .section_subtitle{
-    display: block;
-    font-size: small;
-    margin-bottom: 5px;
+    font-size: 1rem; 
+    color: rgb(216, 214, 214);
+    font-weight: 300;
+    margin-bottom: 1rem;
 }
 
 .section_title , .section_subtitle {
@@ -66,7 +65,7 @@ a{
 .header {
     width: 100%;
     position: fixed;
-    top: 0; /* Mude de 'bottom' para 'top' para posicionar no topo */
+    top: 0;
     left: 0;
     z-index: 99;
     background-color: #15111f;
@@ -78,7 +77,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto; /* Adicionado para centralizar horizontalmente */
+    margin: 0 auto;
 }
 
 .nav_logo {
@@ -105,6 +104,9 @@ a{
 
 .nav_item:hover {
     color: #5224c7;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: #5224c7;
 }
 
 @media (max-width: 768px) {
@@ -124,7 +126,7 @@ a{
 }
 
 .home_container {
-    grid-template-columns: 1fr 2fr; /* ou grid-template-columns: 0.5fr 2fr; */
+    grid-template-columns: 1fr 2fr; 
     padding-top: 3.5rem;
     align-items: center;
 }
@@ -141,17 +143,6 @@ a{
     justify-content: center;
 }
 
-.home_title {
-    font-size: 2rem; 
-}
-
-.home_subtitle {
-    font-size: 1.5rem; 
-    color: rgb(216, 214, 214);
-    font-weight: 200;
-    margin-bottom: 1rem;
-}
-
 .home_description {
     color: white;
     margin-top: 2rem;
@@ -162,117 +153,95 @@ a{
 
 /*---------SKILLS-----------*/
 
-.skills_header{
-    display: flex;
+.skills section{
+    position: relative;
+    width: 100%;
+    height: fit-content;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 2rem;
 }
 
-.skills__titles {
-    display: flex;
-    font-size: white;
-    justify-content: center;
-}
-
-.skills__subtitle{
-    font-size: small;
-    justify-content: center;
+.skills_title{
+    font-size: 2rem;
+    font-weight: 300;
     color: white;
-}
-
-.skills__list {
-    margin-right: auto;
-    margin-left: auto;
-    row-gap: 1.5rem;
-    padding-left: 0;
-}
-
-.skills__titles {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 1rem;
 }
 
-.skills__name {
-    font-size: small;
-    font-weight: 200;
-}
-
-.skills__bar, .skills__percentage {
-    height: 5px;
-    border-radius: .25rem;
-}
-
-.skills__bar {
-    background-color: #5224c7;
-}
-
-.skills__percentage{
-    display: block;
-}
-
-.skills__number{
-    color: white;
-}
-
-/*---------PORTFOLIO-----------*/
-
-.portfolio section {
-    width: 100%;
-}
-
-.section_title {
-    color: white;
-    font-weight: 500;
-    font-size: larger;
-}
-
-.section_subtitle {
-    color: white;
-    font-weight: 300;
-}
-
-.portfolio_container :nth-child(n + 0){
+.progress_bars{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
-.portfolio_content{
+.progress_bar{
     display: flex;
     flex-direction: column;
+}
+
+.prog_title{
+    text-transform: uppercase;
+    font-weight: 200;
+    color: white;
+}
+
+.prog_container{
+    display: flex;
     align-items: center;
-    padding: 10px;
-    margin: 10px;
-    width: 300px;
-    height: 300px;
+}
+
+.progress_bars .progress_bar .prog_text{
+    color: rgb(216, 214, 214);
+}
+
+.progress_bars .progress_bar .prog_container .progress{
+    width: 50%;
+    height: 0.45rem;
     background-color: #251e36;
+    margin-left: 1rem;
+    position: relative;
     border-radius: 10px;
 }
 
-.portfolio_container_header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+.progress_bars .progress_bar .prog_container .progress span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #5224c7;
+    transition: all 0.4s ease-in-out;
+    width: 45%;
+    border-radius: 10px;
 }
 
-.portfolio_content img {
-    margin-right: 10px; 
+.progress_bars .progress_bar .prog_container .progress .java{
+    width: 60%;
 }
 
-.portfolio_title {
-    font-size: medium;
-    color: #5224c7;
+.progress_bars .progress_bar .prog_container .progress .csharp{
+    width: 50%;
 }
 
-.portfolio_description {
-    font-size: small;
-    font-weight: 500;
-    color: white;
-    text-align: center;
+.progress_bars .progress_bar .prog_container .progress .sql{
+    width: 50%;
 }
+
+.progress_bars .progress_bar .prog_container .progress .mongodb{
+    width: 60%;
+}
+
+.progress_bars .progress_bar .prog_container .progress .html{
+    width: 60%;
+}
+
+.progress_bars .progress_bar .prog_container .progress .css{
+    width: 60%;
+}
+
+.progress_bars .progress_bar .prog_container .progress .figma{
+    width: 90%;
+}
+
+/*---------PORTFOLIO-----------*/
 
 
 /*---------CONTACT-----------*/
