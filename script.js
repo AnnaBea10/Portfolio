@@ -2,6 +2,7 @@ let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
+let btnSend = document.querySelector('#contact btn');
 
 window.onscroll = () => {
     sections.forEach(sec => {
@@ -23,3 +24,9 @@ menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 });
+
+btnSend.addEventListener('click', function() {
+    window.alert('Your message was send! Thank you!');
+}); 
+
+
